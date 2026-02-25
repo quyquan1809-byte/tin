@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phiếu đăng ký CLB</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#5f7cff,#7b4bb7);
+}
+
+.form-container{
+    width:450px;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+.form-header{
+    background: linear-gradient(90deg,#5f7cff,#7b4bb7);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.form-header h2{
+    margin-bottom:5px;
+}
+
+.form-body{
+    padding:25px;
+}
+
+.section-title{
+    font-weight:bold;
+    margin:15px 0 10px;
+    border-bottom:2px solid #5f7cff;
+    padding-bottom:5px;
+    color:#444;
+}
+
+label{
+    font-size:14px;
+    display:block;
+    margin-top:10px;
+    margin-bottom:5px;
+    color:#333;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:14px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus, select:focus, textarea:focus{
+    border-color:#7b4bb7;
+    box-shadow:0 0 5px rgba(123,75,183,0.5);
+}
+
+.row{
+    display:flex;
+    gap:10px;
+}
+
+.row .col{
+    flex:1;
+}
+
+.gender{
+    display:flex;
+    gap:15px;
+    margin-top:5px;
+}
+
+.commit{
+    background:#f5f5f5;
+    padding:12px;
+    border-radius:8px;
+    font-size:13px;
+    color:#d32f2f;
+    margin-top:10px;
+}
+
+.submit-btn{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background: linear-gradient(90deg,#5f7cff,#7b4bb7);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.submit-btn:hover{
+    opacity:0.9;
+    transform:scale(1.02);
+}
+
+.footer{
+    text-align:center;
+    font-size:12px;
+    color:#777;
+    margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <div class="form-header">
+        <h2>📄 Phiếu đăng ký</h2>
+        <p>Năm học 2025 - 2026 | Trường THPT Xuân Giang</p>
+    </div>
+
+    <div class="form-body">
+
+        <div class="section-title">👤 Thông tin</div>
+
+        <label>Họ và tên *</label>
+        <input type="text" placeholder="Nhập họ và tên đầy đủ" required>
+
+        <div class="row">
+            <div class="col">
+                <label>Ngày sinh *</label>
+                <input type="date" required>
+            </div>
+
+            <div class="col">
+                <label>Giới tính *</label>
+                <div class="gender">
+                    <label><input type="radio" name="gender"> Nam</label>
+                    <label><input type="radio" name="gender"> Nữ</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label>Lớp *</label>
+                <select required>
+                    <option>-- Chọn lớp --</option>
+                    <option>10A1</option>
+                    <option>11A1</option>
+                    <option>12A1</option>
+                </select>
+            </div>
+
+            <div class="col">
+                <label>Số điện thoại *</label>
+                <input type="tel" placeholder="Nhập số điện thoại" required>
+            </div>
+        </div>
+
+        <label>Email</label>
+        <input type="email" placeholder="Nhập địa chỉ email">
+
+        <div class="section-title">⚠ Cam kết</div>
+
+        <div class="commit">
+            <label>
+                <input type="checkbox" required>
+                Tôi xin cam kết tham gia đầy đủ các hoạt động của Câu lạc bộ, chấp hành nội quy và quy định của nhà trường.
+            </label>
+        </div>
+
+        <button class="submit-btn">📨 Gửi đăng ký</button>
+
+        <div class="footer">
+            © 2026 - Phiếu đăng ký Câu lạc bộ | Trường THPT Xuân Giang
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
